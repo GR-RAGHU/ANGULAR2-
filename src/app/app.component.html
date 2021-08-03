@@ -1,0 +1,16 @@
+<form>
+  <div class="fomr-group">
+<label for="">FirstName</label>
+<input required pattern="bannana" ngModel name="FirstName" #FirstName="ngModel" (change)="log(FirstName)" id="firstName" type="text" class="form-control">
+<div class="alert alert" *ngIf="!FirstName.valid && FirstName.touched">
+  <div *ngIf="FirstName.errors.required">First Name is Required!</div>
+  <div *ngIf="FirstName.errors.pattern">First Name is validname!</div>
+</div>
+</div>
+<div class="form-group">
+  <label for="comment">LastName</label>
+    <textarea  id="" cols="30" rows="10" class="form-control"></textarea>
+  
+</div>
+<button class="btn btn-primary">Submit</button>
+</form>
